@@ -1,0 +1,16 @@
+@model IEnumerable<Guestbook>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+    
+    <h2>Guestbook Entries. </h2>
+}
+
+<td>@Html.ActionLink("Contribute to the Guestbook", "Add")</td>
+
+
+@foreach (var guestbook in Model){
+    <p>@guestbook.WholeName @guestbook.Title @guestbook.Message</p>
+}
+

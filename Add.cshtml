@@ -1,0 +1,32 @@
+@model Guestbook
+
+@{
+    ViewData["Title"] = "Homepage";
+    
+}
+
+<h2>Add Guestbook Entry</h2>
+
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="WholeName"></label>
+        <input asp-for="WholeName" class="form-control" placeholder="Enter your name" id="Name">
+        <span asp-validation-for="WholeName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" class="form-control" placeholder="Enter your first name" id="Title">
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Message"></label>
+        <input asp-for="Message" class="form-control" placeholder="Enter your first name" id="Message">
+        <span asp-validation-for="Message" class="text-danger"></span>
+        
+         <button id="Submit" type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    
+    
+
+</form>
